@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &340368875192605371
 Transform:
   m_ObjectHideFlags: 0
@@ -50,10 +50,27 @@ MonoBehaviour:
   - speed: 1
     damage: 5
     range: 1
-    timeBetweenAttacks: 8
+    timeBetweenAttacks: 3
     amount: 1
     duration: 3
+    upgradeText: 2 fireball
+  - speed: 2
+    damage: 5
+    range: 1
+    timeBetweenAttacks: 3
+    amount: 1
+    duration: 3
+    upgradeText: 3 fireball
+  - speed: 3
+    damage: 5
+    range: 1
+    timeBetweenAttacks: 3
+    amount: 1
+    duration: 3
+    upgradeText: 4 fireball
   weaponLevel: 0
+  statsUpdated: 0
+  icon: {fileID: 21300000, guid: ecdb3bfb3e5e4494dbad9ee5547c40d7, type: 3}
   rotateSpeed: 360
   holder: {fileID: 4136913870998731321}
   fireballToSpawn: {fileID: 248167181867148903}

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
 
     public float speed;
 
@@ -30,19 +31,26 @@ public class Player : MonoBehaviour
     public float startTimeBtwTrail;
     public Transform groundPos;
 
+
+
+    public List<WeaponBase> unassignedWeapons, assignedWeapons;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sceneTransitions = FindObjectOfType<SceneTransition>();
 
-
+        AddWeapon(Random.Range(0, unassignedWeapons.Count));
     }
 
     private void Update()
     {
-
-
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveAmount = moveInput.normalized * speed;
         if (moveInput != Vector2.zero)
@@ -68,8 +76,14 @@ public class Player : MonoBehaviour
         {
             UIController.Instance.levelUpPanel.SetActive(true);
             Time.timeScale = 0f;
+
+            UIController.Instance.levelUpSelectionButtons[0].UpdateButtonDisplay(assignedWeapons[0]);
+            UIController.Instance.levelUpSelectionButtons[1].UpdateButtonDisplay(unassignedWeapons[0]);
+            UIController.Instance.levelUpSelectionButtons[2].UpdateButtonDisplay(unassignedWeapons[1]);
+
         }
-    } 
+    }
+
 
     private void FixedUpdate()
     {
@@ -120,5 +134,21 @@ public class Player : MonoBehaviour
         UpdateHealthUI(health);
     }
 
+    public void AddWeapon(int weaponNumber)
+    {
+        if (weaponNumber < unassignedWeapons.Count)
+        {
+            assignedWeapons.Add(unassignedWeapons[weaponNumber]);
+            unassignedWeapons[weaponNumber].gameObject.SetActive(true);
+            unassignedWeapons.RemoveAt(weaponNumber);
+        }
+    }
+
+    public void AddWeapon(WeaponBase weaponToAdd)
+    {
+        weaponToAdd.gameObject.SetActive(true);
+        assignedWeapons.Add(weaponToAdd);
+        unassignedWeapons.Remove(weaponToAdd);
+    }
 
 }

@@ -740,7 +740,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2882843077178210861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8317746033828188582}
+        m_TargetAssemblyTypeName: LevelUpSelectionButton, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8317746033828188582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +1027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2260662452834863159}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752569887159419802}
+        m_TargetAssemblyTypeName: LevelUpSelectionButton, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &752569887159419802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1326387423939812469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1657,7 +1681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3228212761216876746}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8888343365399827395}
+        m_TargetAssemblyTypeName: LevelUpSelectionButton, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8888343365399827395
 MonoBehaviour:
   m_ObjectHideFlags: 0
