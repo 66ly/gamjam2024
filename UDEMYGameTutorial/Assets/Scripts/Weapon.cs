@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour {
         transform.rotation = rotation;
 
          
-        if (Input.GetMouseButton(0))
+/*        if (Input.GetMouseButton(0))
         {
             if (Time.time >= shotTime)
             {
@@ -33,7 +33,7 @@ public class Weapon : MonoBehaviour {
                 cameraAnim.SetTrigger("shake");
                 shotTime = Time.time + timeBetweenShots;
             }
-        }
+        }*/
 
 
     }
