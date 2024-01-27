@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinWeapon : MonoBehaviour
+public class SpinWeapon : WeaponBase
 {
     public float rotateSpeed;
 
@@ -11,12 +11,12 @@ public class SpinWeapon : MonoBehaviour
     public float timeBetweenSpawn;
     private float spawnCounter;
 
-    /*public EnemyDamager damager;*/
+    public EnemyDamager damager;
 
     // Start is called before the first frame update
     void Start()
     {
-        /*SetStats();*/
+        SetStats();
 
         //UIController.instance.levelUpButtons[0].UpdataButtonDisplay(this);
     }
@@ -24,9 +24,9 @@ public class SpinWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        holder.rotation = Quaternion.Euler(0f,0f,holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime));
+        //holder.rotation = Quaternion.Euler(0f,0f,holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime));
         //fireballToSpawn.rotation = Quaternion.Euler(0f, 0f, fireballToSpawn.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime));
-        /*holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime * stats[weaponLevel].speed));*/
+        holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime * stats[weaponLevel].speed));
 
 
 
@@ -47,17 +47,17 @@ public class SpinWeapon : MonoBehaviour
             //SFXManager.instance.PlaySFXPitched(8);
         }
 
-/*        if (statsUpdated == true)
+        if (statsUpdated == true)
         {
             statsUpdated = false;
 
             SetStats();
-        }*/
+        }
     }
 
-/*    public void SetStats()
+    public void SetStats()
     {
-        damager.damageAmount = stats[weaponLevel].damage;
+        damager.damageAmount = (int) stats[weaponLevel].damage;
 
         transform.localScale = Vector3.one * stats[weaponLevel].range;
 
@@ -66,5 +66,5 @@ public class SpinWeapon : MonoBehaviour
         damager.lifeTime = stats[weaponLevel].duration;
 
         spawnCounter = 0f;
-    }*/
+    }
 }

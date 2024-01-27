@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyDamager : MonoBehaviour
 {
     public int damageAmount;
-    public float liftTime, growSpeed = 5f;
+    public float lifeTime, growSpeed = 5f;
 
     private Vector3 targetSize;
     // Start is called before the first frame update
@@ -21,9 +21,9 @@ public class EnemyDamager : MonoBehaviour
     {
         transform.localScale = Vector3.MoveTowards(transform.localScale, targetSize, growSpeed * Time.deltaTime);
 
-        liftTime -= Time.deltaTime;
+        lifeTime -= Time.deltaTime;
 
-        if (liftTime < 0)
+        if (lifeTime < 0)
         {
             targetSize = Vector3.zero;
             if (transform.localScale.x == 0f)
