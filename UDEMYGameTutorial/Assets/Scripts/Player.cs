@@ -62,7 +62,14 @@ public class Player : MonoBehaviour
         else {
             anim.SetBool("isRunning", false);
         }
-    }
+
+        //TODO: Delete after experience
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UIController.Instance.levelUpPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    } 
 
     private void FixedUpdate()
     {

@@ -154,6 +154,12 @@ Transform:
   m_Father: {fileID: 1450001167}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &62503847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8221350964308688884, guid: 842594e0bca797546b011acfda85dbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2672516391905487225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &62503848 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1326387423939812469, guid: 842594e0bca797546b011acfda85dbb3,
@@ -1011,6 +1017,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433582688}
   m_CullTransparentMesh: 0
+--- !u!114 &434042279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 752569887159419802, guid: 842594e0bca797546b011acfda85dbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2672516391905487225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cd10c328b3bb24f9ed0176023f8725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447057618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3116,6 +3134,18 @@ Transform:
   m_Father: {fileID: 879605136}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252305660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8888343365399827395, guid: 842594e0bca797546b011acfda85dbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2672516391905487225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cd10c328b3bb24f9ed0176023f8725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1264610545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,6 +4147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelUpSelectionButtons:
   - {fileID: 1558028871}
+  levelUpPanel: {fileID: 62503847}
 --- !u!114 &1867112980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,6 +4852,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1867112978}
     m_Modifications:
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1252305660}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpSelectionButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 271722579969832598, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1326387423939812469, guid: 842594e0bca797546b011acfda85dbb3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4926,10 +4992,85 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1558028871}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpSelectionButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293352723094849993, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8221350964308688884, guid: 842594e0bca797546b011acfda85dbb3,
         type: 3}
       propertyPath: m_Name
       value: Level Up Interface
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221350964308688884, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 434042279}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelUpSelectionButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303530152184141911, guid: 842594e0bca797546b011acfda85dbb3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

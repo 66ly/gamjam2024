@@ -12,4 +12,5 @@ public class UIController : MonoBehaviour
     }
 
     public LevelUpSelectionButton[] levelUpSelectionButtons;
+    public GameObject levelUpPanel;
 }
