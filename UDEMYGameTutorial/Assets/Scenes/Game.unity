@@ -3056,12 +3056,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 200, y: 5.72}
   m_EdgeRadius: 0
---- !u!4 &1229091144 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
-    type: 3}
-  m_PrefabInstance: {fileID: 7434689806769863733}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1232975916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,7 +4684,7 @@ Transform:
   - {fileID: 1828090315}
   - {fileID: 1982166032}
   - {fileID: 2092154702}
-  - {fileID: 1229091144}
+  - {fileID: 3043442531458812706}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4814,76 +4808,114 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 7.87}
   m_EdgeRadius: 0
---- !u!1001 &7434689806769863733
+--- !u!4 &3043442531458812706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252685995933431834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6333321566816458115}
+  m_Father: {fileID: 2143019235}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4252685995933431834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3043442531458812706}
+  m_Layer: 8
+  m_Name: Weapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1001 &4516090981126182465
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2143019235}
+    m_TransformParent: {fileID: 3043442531458812706}
     m_Modifications:
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 153395422895724925, guid: d37b84b63b69e0f41831686de9943b3e,
+        type: 3}
+      propertyPath: m_Name
+      value: Oribiting Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.030000001
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.1100001
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.94915116
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.31482086
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5553263961720698647, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
+    - target: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641052004034528303, guid: 897729ecd4d2e2c4da2d07ee0a063f0b,
-        type: 3}
-      propertyPath: m_Name
-      value: Weapons
+      value: 36.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 897729ecd4d2e2c4da2d07ee0a063f0b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: d37b84b63b69e0f41831686de9943b3e, type: 3}
+--- !u!4 &6333321566816458115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 340368875192605371, guid: d37b84b63b69e0f41831686de9943b3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4516090981126182465}
+  m_PrefabAsset: {fileID: 0}
