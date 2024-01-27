@@ -51,3 +51,6 @@ TagManager:
   - name: Weapon
     uniqueID: 2257309829
     locked: 0
+  - name: ExperiencePickups
+    uniqueID: 1484569769
+    locked: 0
