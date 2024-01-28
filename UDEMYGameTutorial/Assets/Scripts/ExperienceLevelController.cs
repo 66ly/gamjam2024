@@ -28,7 +28,7 @@ public class ExperienceLevelController : MonoBehaviour
     {
         while (expLevels.Count < levelCount)
         {
-            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.1f));
+            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.2f));
         }
     }
 
@@ -37,6 +37,7 @@ public class ExperienceLevelController : MonoBehaviour
         currentExperience += amountToGet;
         if (currentExperience >= expLevels[currentLevel])
         {
+
             LevelUp();
         }
         UIController.Instance.UpdateExperience(currentExperience, expLevels[currentLevel], currentLevel);
@@ -49,12 +50,15 @@ public class ExperienceLevelController : MonoBehaviour
 
     void LevelUp()
     {
-        currentExperience -= expLevels[currentLevel];
         currentLevel++;
         if (currentLevel >= expLevels.Count)
         {
             currentLevel = expLevels.Count - 1;
+            return;
         }
+
+        currentExperience -= expLevels[currentLevel];
+
 
         UIController.Instance.levelUpPanel.SetActive(true);
         Time.timeScale = 0f;
@@ -77,7 +81,7 @@ public class ExperienceLevelController : MonoBehaviour
         {
             availableWeapons.AddRange(Player.Instance.unassignedWeapons);
         }
-        
+
         for (int i = weaponsToUpgrade.Count; i < 3; i++)
         {
             if (availableWeapons.Count > 0)
@@ -93,12 +97,13 @@ public class ExperienceLevelController : MonoBehaviour
             UIController.Instance.levelUpSelectionButtons[i].UpdateButtonDisplay(weaponsToUpgrade[i]);
         }
 
-        for(int i = 0; i < UIController.Instance.levelUpSelectionButtons.Length; i++)
+        for (int i = 0; i < UIController.Instance.levelUpSelectionButtons.Length; i++)
         {
             if (i < weaponsToUpgrade.Count)
             {
                 UIController.Instance.levelUpSelectionButtons[i].gameObject.SetActive(true);
-            } else
+            }
+            else
             {
                 UIController.Instance.levelUpSelectionButtons[i].gameObject.SetActive(false);
             }
