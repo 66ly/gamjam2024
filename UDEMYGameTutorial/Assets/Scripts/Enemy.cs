@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
     public int health;
     [HideInInspector]
@@ -20,22 +21,23 @@ public class Enemy : MonoBehaviour {
 
     public GameObject deathEffect;
 
-    public int expToGive = 10;
+    public int expToGive = 1;
 
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    public void TakeDamage (int amount) {
+    public void TakeDamage(int amount)
+    {
         health -= amount;
         if (health <= 0)
         {
             int randomNumber = Random.Range(0, 101);
             //if (randomNumber < pickupChance)
             //{
-                //GameObject randomPickup = pickups[Random.Range(0, pickups.Length)];
-                //Instantiate(randomPickup, transform.position, transform.rotation);
+            //GameObject randomPickup = pickups[Random.Range(0, pickups.Length)];
+            //Instantiate(randomPickup, transform.position, transform.rotation);
             //}
 
             int randHealth = Random.Range(0, 101);
@@ -51,5 +53,5 @@ public class Enemy : MonoBehaviour {
 
         }
     }
-	
+
 }
