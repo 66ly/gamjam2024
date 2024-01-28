@@ -45,29 +45,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.27849078, y: 0.10609186}
+  m_Offset: {x: -0.3325417, y: -0.08308458}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -78,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8831306, y: 4.3418894}
+  m_Size: {x: 1.0454106, y: 8.179481}
   m_EdgeRadius: 0
 --- !u!114 &4739724724253274062
 MonoBehaviour:
@@ -228,7 +209,7 @@ Transform:
   m_Children:
   - {fileID: 6442824580560783620}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5156042401664157474
 MonoBehaviour:
@@ -249,35 +230,35 @@ MonoBehaviour:
     timeBetweenAttacks: 1.5
     amount: 1
     duration: 3
-    upgradeText: damage
-  - speed: 9
+    upgradeText: Damage
+  - speed: 7
     damage: 7
     range: 2
-    timeBetweenAttacks: 1.25
+    timeBetweenAttacks: 1.5
     amount: 2
     duration: 3
-    upgradeText: damage
+    upgradeText: More Damage
   - speed: 7
+    damage: 7
+    range: 3
+    timeBetweenAttacks: 1.5
+    amount: 3
+    duration: 3
+    upgradeText: More Frequent
+  - speed: 10
     damage: 10
     range: 3
     timeBetweenAttacks: 1.5
     amount: 3
     duration: 3
-    upgradeText: damage
-  - speed: 7
-    damage: 10
+    upgradeText: Quicker
+  - speed: 10
+    damage: 12
     range: 3
     timeBetweenAttacks: 1.5
     amount: 3
     duration: 3
-    upgradeText: damage
-  - speed: 7
-    damage: 10
-    range: 3
-    timeBetweenAttacks: 1.5
-    amount: 3
-    duration: 3
-    upgradeText: damage
+    upgradeText: More Damage
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: 094f0c8e4819a48209e8de24b0475c4c, type: 3}

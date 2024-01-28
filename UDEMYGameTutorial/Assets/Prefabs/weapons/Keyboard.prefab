@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 3731365002753880795}
   m_Father: {fileID: 2182694355733964041}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4047065389176816240
 GameObject:
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 8305607706307464142}
   - {fileID: 5718814488407531345}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 36.7}
 --- !u!114 &2346134696279349612
 MonoBehaviour:
@@ -79,35 +79,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-  - speed: 1
-    damage: 5
+  - speed: 0.5
+    damage: 4
     range: 1
     timeBetweenAttacks: 3
     amount: 1
     duration: 3
     upgradeText: 2 keyboards
-  - speed: 1
+  - speed: 0.5
     damage: 5
     range: 1
     timeBetweenAttacks: 3
     amount: 2
     duration: 3
     upgradeText: 3 keyboards
-  - speed: 1
+  - speed: 0.5
     damage: 5
     range: 1
     timeBetweenAttacks: 3
     amount: 3
     duration: 3
     upgradeText: Add Damage
-  - speed: 1
+  - speed: 0.7
     damage: 7
     range: 1
     timeBetweenAttacks: 3
     amount: 3
     duration: 3
     upgradeText: Damage
-  - speed: 1
+  - speed: 0.8
     damage: 7
     range: 1
     timeBetweenAttacks: 3
@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8305607706307464142}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4498624764490796197
 SpriteRenderer:
@@ -218,25 +218,6 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -292,5 +273,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2182694355733964041}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
