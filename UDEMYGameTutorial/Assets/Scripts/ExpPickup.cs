@@ -32,10 +32,8 @@ public class ExpPickup : MonoBehaviour
             if (checkCounter <= 0)
             {
                 checkCounter = timeBetweenChecks;
-                Debug.Log(Vector3.Distance(transform.position, player.transform.position));
                 if (Vector3.Distance(transform.position, player.transform.position) < player.pickupRange)
                 {
-                    Debug.Log("?");
                     movingToPlayer = true;
                     moveSpeed += player.speed;
                 }

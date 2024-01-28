@@ -37,6 +37,7 @@ public class ExperienceLevelController : MonoBehaviour
         currentExperience += amountToGet;
         if (currentExperience >= expLevels[currentLevel])
         {
+
             LevelUp();
         }
         UIController.Instance.UpdateExperience(currentExperience, expLevels[currentLevel], currentLevel);
@@ -49,12 +50,15 @@ public class ExperienceLevelController : MonoBehaviour
 
     void LevelUp()
     {
-        currentExperience -= expLevels[currentLevel];
         currentLevel++;
         if (currentLevel >= expLevels.Count)
         {
             currentLevel = expLevels.Count - 1;
+            return;
         }
+
+        currentExperience -= expLevels[currentLevel];
+
 
         UIController.Instance.levelUpPanel.SetActive(true);
         Time.timeScale = 0f;
