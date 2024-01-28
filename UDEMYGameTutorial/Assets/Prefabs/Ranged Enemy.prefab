@@ -92,12 +92,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093378647639530}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c2226a405d914e50a0d59124bec566c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.3
   wobbleAmount: 0.5
   wobbleSpeed: 5
   tiltAmount: 10
@@ -173,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20811677, y: -2.69}
+  m_Offset: {x: 0.20811677, y: -2.29}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -184,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.19, y: 3.42}
+  m_Size: {x: 1.19, y: 2.54}
   m_EdgeRadius: 0
 --- !u!50 &50950218893622214
 Rigidbody2D:
