@@ -238,6 +238,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 138147586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &138147588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5156042401664157474, guid: 3c19fba7fbc749740b654669de31bef0,
+    type: 3}
+  m_PrefabInstance: {fileID: 138147586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759667170dbfd4240aec04b91301705e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &148830571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentExperience: 0
   pickup: {fileID: 2201154177652639181, guid: 437d52c157785418da01cba62ed13640, type: 3}
-  expLevels: 05000000
+  expLevels: 0a000000
   currentLevel: 1
   levelCount: 10
   weaponsToUpgrade: []
@@ -1834,6 +1846,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 760163006}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &760163008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7262086781927421332, guid: 4c76c4c26f2c74cb19282418a322ed44,
+    type: 3}
+  m_PrefabInstance: {fileID: 760163006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759667170dbfd4240aec04b91301705e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &785936371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2043,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3043442531458812706}
     m_Modifications:
+    - target: {fileID: 2590179186776255300, guid: 61aef862e61dc435a9eb977574839856,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590179186981733301, guid: 61aef862e61dc435a9eb977574839856,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2590179187088375437, guid: 61aef862e61dc435a9eb977574839856,
         type: 3}
       propertyPath: m_Name
@@ -2083,6 +2117,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2590179187088375439, guid: 61aef862e61dc435a9eb977574839856,
+        type: 3}
+      propertyPath: stats.Array.data[0].damage
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3511,6 +3550,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1698438699}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1698438701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2346134696279349612, guid: 8812d4b608f9675469e0c99e0cd501dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1698438699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3baa1d0ae8b63be4f99c23fe937fc972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706155389
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,6 +4482,18 @@ Transform:
   m_Father: {fileID: 1450001167}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2018038814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2590179187088375439, guid: 61aef862e61dc435a9eb977574839856,
+    type: 3}
+  m_PrefabInstance: {fileID: 849259769}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920859e56eb2645d09820a79487e207d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040364406
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4686,10 @@ MonoBehaviour:
   startTimeBtwTrail: 0.05
   groundPos: {fileID: 2092154702}
   unassignedWeapons:
-  - {fileID: 2590179187088375439, guid: 61aef862e61dc435a9eb977574839856, type: 3}
+  - {fileID: 138147588}
+  - {fileID: 1698438701}
+  - {fileID: 2018038814}
+  - {fileID: 760163008}
   assignedWeapons: []
   maxWeapons: 4
   fullyLeveledWeapons: []

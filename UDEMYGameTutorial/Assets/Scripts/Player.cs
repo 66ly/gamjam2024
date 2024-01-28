@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public Transform groundPos;
 
     public List<WeaponBase> unassignedWeapons, assignedWeapons;
-    public int maxWeapons = 3;
+    public int maxWeapons = 4;
 
     [HideInInspector]
     public List<WeaponBase> fullyLeveledWeapons = new List<WeaponBase>();
@@ -143,8 +143,11 @@ public class Player : MonoBehaviour
 
     public void AddWeapon(int weaponNumber)
     {
+        Debug.Log("Add weapon");
+
         if (weaponNumber < unassignedWeapons.Count)
         {
+            Debug.Log("Add weapon 2");
             assignedWeapons.Add(unassignedWeapons[weaponNumber]);
             unassignedWeapons[weaponNumber].gameObject.SetActive(true);
             unassignedWeapons.RemoveAt(weaponNumber);
