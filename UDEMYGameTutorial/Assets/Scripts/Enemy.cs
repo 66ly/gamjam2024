@@ -20,6 +20,8 @@ public class Enemy : MonoBehaviour {
 
     public GameObject deathEffect;
 
+    public int expToGive = 10;
+
     public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -44,6 +46,9 @@ public class Enemy : MonoBehaviour {
 
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+
+            ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
+
         }
     }
 	
