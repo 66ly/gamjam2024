@@ -37,8 +37,10 @@ public class EnemyDamager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("collllll=========");
         if (other.tag == "Enemy")
         {
+            Debug.Log("enemy=========" + damageAmount);
             other.GetComponent<Enemy>().TakeDamage((int)damageAmount);
             if (isImpact)
             {

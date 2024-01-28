@@ -33,6 +33,10 @@ public class Player : MonoBehaviour
     public Transform groundPos;
 
     public List<WeaponBase> unassignedWeapons, assignedWeapons;
+    public int maxWeapons = 3;
+
+    [HideInInspector]
+    public List<WeaponBase> fullyLeveledWeapons = new List<WeaponBase>();
 
     private void Awake()
     {
@@ -69,18 +73,6 @@ public class Player : MonoBehaviour
         else
         {
             anim.SetBool("isRunning", false);
-        }
-
-        //TODO: Delete after experience
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UIController.Instance.levelUpPanel.SetActive(true);
-            Time.timeScale = 0f;
-
-            UIController.Instance.levelUpSelectionButtons[0].UpdateButtonDisplay(assignedWeapons[0]);
-            UIController.Instance.levelUpSelectionButtons[1].UpdateButtonDisplay(unassignedWeapons[0]);
-            UIController.Instance.levelUpSelectionButtons[2].UpdateButtonDisplay(unassignedWeapons[1]);
-
         }
     }
 

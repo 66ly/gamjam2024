@@ -25,4 +25,10 @@ public class UIController : MonoBehaviour
         experienceSlider.value = currentExp;
         experienceText.text = "LEVEL: " + currentLvl;
     }
+
+    public void SkipLevelUp()
+    {
+        levelUpPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
 }
