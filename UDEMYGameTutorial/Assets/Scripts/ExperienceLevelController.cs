@@ -15,21 +15,19 @@ public class ExperienceLevelController : MonoBehaviour
     public ExpPickup pickup;
 
     public List<int> expLevels;
-    public int currentLevel = 1, levelCount = 10;
+    public int currentLevel = 1, levelCount = 12;
 
     void Start()
     {
-        while (expLevels.Count < levelCount)
-        {
-            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.1f));
-        }
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        while (expLevels.Count < levelCount)
+        {
+            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.1f));
+        }
     }
 
     public void GetExp(int amountToGet)

@@ -47,8 +47,8 @@ public class ExpPickup : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            ExperienceLevelController.instance.GetExp(expValue);
             Destroy(gameObject);
+            ExperienceLevelController.instance.GetExp(expValue);
         }
     }
 }
