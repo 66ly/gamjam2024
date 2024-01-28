@@ -13,7 +13,7 @@ public class Pickup : MonoBehaviour {
         if (collision.tag == "Player")
         {
             Instantiate(effect, transform.position, Quaternion.identity);
-            collision.GetComponent<Player>().ChangeWeapon(weaponToEquip);
+            //collision.GetComponent<Player>().ChangeWeapon(weaponToEquip);
             Destroy(gameObject);
         }
     }
