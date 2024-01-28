@@ -28,7 +28,7 @@ public class ExperienceLevelController : MonoBehaviour
     {
         while (expLevels.Count < levelCount)
         {
-            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.1f));
+            expLevels.Add(Mathf.CeilToInt(expLevels[expLevels.Count - 1] * 1.2f));
         }
     }
 
@@ -77,7 +77,7 @@ public class ExperienceLevelController : MonoBehaviour
         {
             availableWeapons.AddRange(Player.Instance.unassignedWeapons);
         }
-        
+
         for (int i = weaponsToUpgrade.Count; i < 3; i++)
         {
             if (availableWeapons.Count > 0)
@@ -93,12 +93,13 @@ public class ExperienceLevelController : MonoBehaviour
             UIController.Instance.levelUpSelectionButtons[i].UpdateButtonDisplay(weaponsToUpgrade[i]);
         }
 
-        for(int i = 0; i < UIController.Instance.levelUpSelectionButtons.Length; i++)
+        for (int i = 0; i < UIController.Instance.levelUpSelectionButtons.Length; i++)
         {
             if (i < weaponsToUpgrade.Count)
             {
                 UIController.Instance.levelUpSelectionButtons[i].gameObject.SetActive(true);
-            } else
+            }
+            else
             {
                 UIController.Instance.levelUpSelectionButtons[i].gameObject.SetActive(false);
             }
