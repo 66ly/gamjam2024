@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyDamager : MonoBehaviour
 {
-    public int damageAmount;
+    public float damageAmount;
     public float lifeTime, growSpeed = 5f;
 
     private Vector3 targetSize;
+
+    public bool isImpact;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,12 +39,16 @@ public class EnemyDamager : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            other.GetComponent<Enemy>().TakeDamage(damageAmount); 
+            other.GetComponent<Enemy>().TakeDamage((int)damageAmount);
+            if (isImpact)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (other.tag == "boss")
         {
-            other.GetComponent<Boss>().TakeDamage(damageAmount);
+            other.GetComponent<Boss>().TakeDamage((int)damageAmount);
         }
     }
 }
