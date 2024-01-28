@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static Player Instance { get; private set; }
 
     public float speed;
+    public float pickupRange = 1.5f;
 
     private Rigidbody2D rb;
 
@@ -30,8 +31,6 @@ public class Player : MonoBehaviour
     private float timeBtwTrail;
     public float startTimeBtwTrail;
     public Transform groundPos;
-
-
 
     public List<WeaponBase> unassignedWeapons, assignedWeapons;
 
@@ -67,7 +66,8 @@ public class Player : MonoBehaviour
             }
             anim.SetBool("isRunning", true);
         }
-        else {
+        else
+        {
             anim.SetBool("isRunning", false);
         }
 
@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-       Instantiate(hurtSound, transform.position, Quaternion.identity);
+        Instantiate(hurtSound, transform.position, Quaternion.identity);
         health -= amount;
         UpdateHealthUI(health);
         hurtAnim.SetTrigger("hurt");
@@ -103,12 +103,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ChangeWeapon(Weapon weaponToEquip) {
+    public void ChangeWeapon(Weapon weaponToEquip)
+    {
         Destroy(GameObject.FindGameObjectWithTag("Weapon"));
         Instantiate(weaponToEquip, transform.position, transform.rotation, transform);
     }
 
-    void UpdateHealthUI(int currentHealth) {
+    void UpdateHealthUI(int currentHealth)
+    {
 
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -116,7 +118,9 @@ public class Player : MonoBehaviour
             if (i < currentHealth)
             {
                 hearts[i].GetComponent<Image>().sprite = fullHeart;
-            } else {
+            }
+            else
+            {
                 hearts[i].GetComponent<Image>().sprite = emptyHeart;
             }
 
@@ -124,11 +128,14 @@ public class Player : MonoBehaviour
 
     }
 
-    public void Heal(int healAmount) {
+    public void Heal(int healAmount)
+    {
         if (health + healAmount > 5)
         {
             health = 5;
-        } else {
+        }
+        else
+        {
             health += healAmount;
         }
         UpdateHealthUI(health);

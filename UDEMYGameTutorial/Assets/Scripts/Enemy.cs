@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
     public int health;
     [HideInInspector]
@@ -11,6 +12,8 @@ public class Enemy : MonoBehaviour {
     public float speed;
     public float timeBetweenAttacks;
     public int damage;
+
+    public int expToGive = 10;
 
     public int pickupChance;
     public GameObject[] pickups;
@@ -25,7 +28,8 @@ public class Enemy : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    public void TakeDamage (int amount) {
+    public void TakeDamage(int amount)
+    {
         health -= amount;
         if (health <= 0)
         {
@@ -44,7 +48,8 @@ public class Enemy : MonoBehaviour {
 
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+            ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
         }
     }
-	
+
 }
